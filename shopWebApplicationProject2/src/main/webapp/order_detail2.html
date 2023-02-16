@@ -1,0 +1,232 @@
+
+
+
+
+
+
+
+
+  
+     
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>쇼핑몰 관리</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet href="css/styles.css" type="text/css">
+<link rel=stylesheet href="css/shop.css" type="text/css">
+ 
+<style type="text/css" media="screen">
+/*
+form > table tr td{
+	border: 0.1px solid black;
+}
+*/
+</style>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
+	marginwidth=0 marginheight=0>
+	<!-- container start-->
+	<div id="container">
+		<!-- header start -->
+		<div id="header">
+			<!-- include_common_top.jsp start-->
+		    
+
+
+
+
+
+<div id="menu">
+	<ul>
+		<li id="logo"><a href="shop_main.jsp"></a></li>
+		
+		<!-- 
+			<li id="mypage" title="나의페이지" ><a href="user_view.jsp"></a></li>
+			<li id="cart" title="장바구니"><span class="w3-badge w3-green w3-margin-right">2</span><a href="cart_view_select_update_qyt_all_check_delete_image2.jsp"></a></li>
+			 -->
+		<li id="menu_cart"><a href='cart_view.jsp'></a></li>
+		<li id="menu_order"><a href='order_list.jsp'></a></li>
+		<li id="menu_logout"><a href='user_logout_action.jsp'></a></li>
+		<li id="menu_mypage"><a href='user_view.jsp'></a></li>
+		
+	</ul>
+</div>
+<h1>
+ <a href=''></a>
+</h1>
+
+
+
+
+<div id="cat_menu">
+	<ul>
+		<li id="cat_menu_01"><a href='product_list.jsp'></a></li>
+		<li id="cat_menu_02"><a href='product_list.jsp'></a></li>
+		<li id="cat_menu_03"><a href='product_list.jsp'></a></li>
+		<li id="cat_menu_04"><a href='product_list.jsp'></a></li>
+		<li id="cat_menu_05"><a href='product_list.jsp'></a></li>
+	</ul>
+</div>
+
+
+			<!-- include_common_top.jsp end-->
+		</div>
+		<!-- header end -->
+		<!-- navigation start-->
+		<div id="navigation">
+			<!-- include_common_left.jsp start-->
+			
+<p>
+	
+</p>
+<ul>
+	
+</ul>
+
+			<!-- include_common_left.jsp end-->
+		</div>
+		<!-- navigation end-->
+		<!-- wrapper start -->
+		<div id="wrapper">
+			<!-- content start -->
+
+			<!-- include_content.jsp start-->
+			<div id="content">
+				<table border=0 cellpadding=0 cellspacing=0>
+					<tr>
+						<td><br />
+							<table style="padding-left: 10px" border=0 cellpadding=0
+								cellspacing=0>
+								<tr>
+									<td bgcolor="f4f4f4" height="22">&nbsp;&nbsp;<b>쇼핑몰 -
+											주문상세조회</b></td>
+								</tr>
+							</table> <!--form-->
+							<form name="f" method="post" action="order_delete_action.jsp">
+								<input type="hidden" name="j_no" value="1">
+								<table align="center" width="80%"  border="0" cellpadding="0" cellspacing="1"  bgcolor="BBBBBB" >
+									<caption style="text-align: left;font-weight:bold;padding-bottom: 7px"><span style="border-left: 4px solid #888888;"></span>&nbsp;&nbsp;주문자정보</caption>
+									
+									<tr>
+										<td width=150 height=25 bgcolor="E6ECDE" align=center class=t1><font
+											>주문번호</font></td>
+										<td width=112 height=25 bgcolor="E6ECDE" align=center class=t1><font
+											>주문일</font></td>
+										<td width=166 height=25 bgcolor="E6ECDE" align=center class=t1><font
+											>주문자</font></td>
+										<td width=190 height=25 bgcolor="E6ECDE" align=center class=t1><font
+											>주문메모</font></td>
+									</tr>
+									
+									
+									<tr>
+										<td width=150 height=26 align=center bgcolor="ffffff" class=t1>202221778-446526223</td>
+										<td width=112 height=26 align=center bgcolor="ffffff" class=t1>2022.02.21</td>
+										<td width=166 height=26 align=center bgcolor="ffffff" class=t1>최혜정</td>
+										<td width=190 height=26 align=center bgcolor="ffffff" class=t1>
+												
+										</td>
+									</tr>
+								</table>
+								<br>
+								<table align="center" width="80%"  border="0" cellpadding="0" cellspacing="1"  bgcolor="BBBBBB" >
+									<caption style="text-align: left;font-weight:bold;padding-bottom: 7px"><span style="border-left: 4px solid #888888;"></span>&nbsp;&nbsp;배송지정보</caption>
+									
+									<tr>
+										<td width=150 height=25 bgcolor="E6ECDE" align=center class=t1><font
+											>수취인</font></td>
+										<td width=112 height=25 bgcolor="E6ECDE" align=center class=t1><font
+											>수취인연락처</font></td>
+										<td width=356 height=25 bgcolor="E6ECDE" align=center class=t1 colspan="2"><font
+											>주소</font></td>
+										
+									</tr>
+									
+									
+									<tr>
+										<td width=150 height=26 align=center bgcolor="ffffff" class=t1>최혜정</td>
+										<td width=112 height=26 align=center bgcolor="ffffff" class=t1>010-7865-8621</td>
+										<td width=356 height=26 align=center bgcolor="ffffff" class=t1 colspan="2">02832: 서울시 성북구 동소문로13가길 29</td>
+										
+									</tr>
+								</table>	
+								<br/>	
+								<table align=center width=80% border="0" cellpadding="0"
+									cellspacing="1" bgcolor="BBBBBB">
+									<caption style="text-align: left;font-weight:bold;padding-bottom: 7px"><span style="border-left: 4px solid #888888;"></span>&nbsp;&nbsp;주문할상품</caption>
+									<tr style="border: 0.1px solid">
+										<td width=30 height=25 bgcolor="E6ECDE" align=center class=t1></td>
+										<td width=260 height=25 bgcolor="E6ECDE" align=center class=t1>강아지
+											이름</td>
+										<td width=112 height=25 bgcolor="E6ECDE" align=center class=t1>수
+											량</td>
+										<td width=166 height=25 bgcolor="E6ECDE" align=center class=t1>가
+											격</td>
+										<td width=50 height=25 bgcolor="E6ECDE" align=center class=t1>비
+											고</td>
+									</tr>
+									
+									<!-- cart item start -->
+									<tr>
+										<td width=30 height=26 align=center bgcolor="ffffff" class=t1>
+											<a
+											href='product_detail.jsp?p_no=1'><img width="30"  height="26" src="image/0700000065282.jpg"></a>
+										</td>
+										<td width=260 height=26 align=center bgcolor="ffffff" class=t1>
+											<a
+											href='product_detail.jsp?p_no=1'>예쁜동물친구들</a>
+										</td>
+										<td width=112 height=26 align=center bgcolor="ffffff" class=t1>2</td>
+										<td width=166 height=26 align=center bgcolor="ffffff" class=t1>
+											1,100,000
+										</td>
+										<td width=50 height=26 align=center bgcolor="ffffff" class=t1></td>
+									</tr>
+									<!-- cart item end -->
+									
+									
+									
+									<tr>
+										<td width=640 colspan=5 height=26 bgcolor="ffffff" class=t1>
+											<p align=right style="padding-top: 10px">
+												<font color=#FF0000>총 주문 금액 : 3,600,000
+													원
+												</font>
+											</p>
+										</td>
+									</tr>
+								</table>
+							</form> <br />
+							<table border="0" cellpadding="0" cellspacing="1" width="590">
+								<tr>
+									<td align=center> 
+										&nbsp;&nbsp;<a href=order_list.jsp
+										class=m1>주문목록</a>
+										&nbsp;&nbsp;<a href=product_list.jsp
+										class=m1>계속 쇼핑하기</a>
+
+									</td>
+								</tr>
+							</table></td>
+					</tr>
+				</table>
+			</div>
+			<!-- include_content.jsp end-->
+			<!-- content end -->
+		</div>
+		<!--wrapper end-->
+		<div id="footer">
+			<!-- include_common_bottom.jsp start-->
+			
+	<p align="right" style="float: right">Copyrightⓒ 2022 TOYLAND.All Rights Reserved.</p>
+
+			<!-- include_common_bottom.jsp end-->
+		</div>
+	</div>
+	<!--container end-->
+</body>
+</html>

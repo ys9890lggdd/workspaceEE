@@ -1,0 +1,59 @@
+@charset "UTF-8";
+	/*
+	tag selector
+	*/
+	 body{
+		background-color: pink;
+	}
+	h3{
+		text-align: center;
+	}
+	form{
+		width: 450px;
+		margin: 0px auto 0px auto;
+		background: white;
+		border: 1px solid black;
+	}
+	th{
+		background:#eeeeee; 
+		font-size:8pt;
+	} 
+	/*
+	class selector
+	*/
+	.TXTFLD{
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		
+	}
+	.TXTFLD1{
+		border-width: 1px;
+		border-style: solid;
+		border-color: blue;
+		color: blue;
+	} 
+	
+	/*
+	id selector
+	*/
+	
+	#jointbl{
+		background-color: gold;
+		width: 450px;
+	}
+	#first-tr{
+		color:maroon;
+	}
+	#jointbl  input[type=submit]{
+		color: white;
+		background: gold;
+		border: 1px solid white;
+		
+	}
+	#jointbl  input[type=submit]:hover{
+		background: white;
+		color: gold;
+		border: 1px solid white;
+		
+	} 

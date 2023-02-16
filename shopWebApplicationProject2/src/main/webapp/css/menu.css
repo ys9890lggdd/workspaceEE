@@ -1,0 +1,236 @@
+@import url("cart.css");
+
+div#header {
+	all: unset;
+	background-color: #F3F2ED;
+}
+
+div#header h1 {
+	height: 80px;
+	line-height: 80px;
+	margin: 0px 0 0 0;
+	padding-left: 10px;
+	background: #fff url('../image/toyland_maincc.jpg');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: 30%
+}
+
+div#header #menu {
+	margin-top: 10px;
+}
+
+#menu{
+	margin-bottom: 10px;
+}
+
+#menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+
+#menu ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#menu li#logo {
+	float: left;
+}
+
+#menu li {
+	float: right;
+}
+
+#menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px 16px 20px 16px;
+	text-decoration: none;
+}
+
+#menu .active {
+	background-color: #4CAF50;
+}
+
+#menu li#logo {
+	width: 90px;
+	background: url('../image/toyland_maincc.jpg');
+	background-position: left;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#logo:hover {
+	opacity: 1;
+}
+
+#menu li#cart {
+	width: 40px;
+	background: url('../image/image__header-cart.svg');
+	background-position: center;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#cart:hover {
+	opacity: 1;
+}
+
+#menu li#mypage {
+	width: 40px;
+	background: url('../image/image__header-mypage.svg');
+	background-position: bottom;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#mypage:hover {
+	opacity: 1;
+}
+
+#menu li#menu_login {
+	width: 38px;
+	background: url('../image/ntop_login.png');
+	background-position: bottom;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#menu_join {
+	width: 45px;
+	background: url('../image/ntop_join.png');
+	background-position: bottom;
+	background-size: 77%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#menu_cart {
+	width: 52px;
+	background: url('../image/ntop_cart.png');
+	background-position: bottom;
+	background-size: 86%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#menu_order {
+	width: 45px;
+	background: url('../image/ntop_order.png');
+	background-position: bottom;
+	background-size: 79%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+#menu li#menu_logout {
+	width: 45px;
+	background: url('../image/ntop_logout.png');
+	background-position: bottom;
+	background-size: 81%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#menu li#menu_mypage {
+	width: 65px;
+	background: url('../image/ntop_mypage.png');
+	background-position: bottom;
+	background-size: 82%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#menu li#menu_notice {
+	width: 52px;
+	background: url('../image/ntop_notice.png');
+	background-position: bottom;
+	background-size: 66%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#menu li#menu_qna {
+	width: 52px;
+	background: url('../image/ntop_qna.png');
+	background-position: bottom;
+	background-size: 68%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+
+/***********************************category menu***********************/
+#cat_menu{
+	margin-bottom: 0px;
+}
+
+#cat_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #a6dbd5;
+}
+
+#cat_menu ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+#cat_menu li {
+	float: left;
+}
+
+#cat_menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px 16px 20px 16px;
+	text-decoration: none;
+}
+
+#cat_menu .active {
+	background-color: #4CAF50;
+}
+#cat_menu li#cat_menu_01{
+	width: 60px;
+	background: url('../image/ntop_menu_01.png');
+	background-position: bottom;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#cat_menu li#cat_menu_02{
+	width: 60px;
+	background: url('../image/ntop_menu_02.png');
+	background-position: bottom;
+	background-size: 62%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#cat_menu li#cat_menu_03{
+	width: 60px;
+	background: url('../image/ntop_menu_03.png');
+	background-position: bottom;
+	background-size: 87%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#cat_menu li#cat_menu_04{
+	width: 60px;
+	background: url('../image/ntop_menu_04.png');
+	background-position: bottom;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
+#menu,#cat_menu {
+	opacity: 1;
+}

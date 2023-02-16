@@ -1,0 +1,5 @@
+Hello text 1[static resource] !!!
+Hello text 2[static resource] !!!
+Hello text 3[static resource] !!!
+Hello text 4[static resource] !!!
+Hello text 5[static resource] !!!

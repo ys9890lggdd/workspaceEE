@@ -1,0 +1,7 @@
+ <<  파라메타 값 한글인코딩 >>
+      A. server.xml LINE 63 --> URIEncoding="UTF-8" 속성추가
+       <Connector connectionTimeout="20000" port="80"
+			protocol="HTTP/1.1" redirectPort="8443" 
+			URIEncoding="UTF-8"/>
+      B. 서블릿요청객체에 문자인코딩설정
+         request.setCharacterEncoding("UTF-8");  
