@@ -27,7 +27,7 @@ public class UserViewController implements Controller{
 		/*
 		1. UserService객체생성
 		2. 세션의 sUserId를 사용해서 UserService.findUser()메쏘드호출
-		3. 반환된 User객체출력
+		3. 반환된 User객체를 request 객체로 반환
 		*/
 		try {
 			User user = userService.findUser(sUserId);

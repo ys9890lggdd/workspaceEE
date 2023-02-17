@@ -51,31 +51,31 @@
 										<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><input type="text"
-											style="width: 150" name="guest_name"></td>
+											style="width: 150" name="${guest.guest_no}"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">이메일</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><input type="text"
-											style="width: 150" name="guest_email"></td>
+											style="width: 150" name="${guest.guest_email}"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">홈페이지</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><input type="text"
-											style="width: 150" name="guest_homepage"></td>
+											style="width: 150" name="${guest.guest_homepage}"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">타이틀</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><input type="text"
-											style="width: 240" name="guest_title"></td>
+											style="width: 240" name="${guest.guest_title}"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">내용</td>
 										<td width=490 align="left" bgcolor="ffffff"
 											style="padding-left: 10px"><textarea wrap="soft"
-												style="width: 240px" rows="10" name="guest_content"></textarea>
+												style="width: 240px" rows="10" name="${guest.guest_content}"></textarea>
 										</td>
 									</tr>
 								</table>

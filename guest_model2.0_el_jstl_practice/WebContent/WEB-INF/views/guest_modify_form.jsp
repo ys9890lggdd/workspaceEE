@@ -54,47 +54,47 @@ Guest guest=(Guest)request.getAttribute("guest");
 					</tr>
 				</table> <!-- modify Form  -->
 				<form name="f" method="post">
-					<input type="hidden" name="guest_no" value="<%=guest.getGuest_no()%>" />
+					<input type="hidden" name="guest_no" value="${guest.guest_no}" />
 					<table border="0" cellpadding="0" cellspacing="1" width="590"
 						bgcolor="BBBBBB">
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">번호</td>
 							<td align="left" width=490 bgcolor="ffffff"
-								style="padding-left: 10px"><%=guest.getGuest_no()%></td>
+								style="padding-left: 10px">${guest.guest_no}</td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>
 							<td align="left" width=490 bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
 								style="width: 150" name="guest_name"
-								value="<%=guest.getGuest_name()%>"></td>
+								value="${guest.guest_name}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">홈페이지</td>
 							<td align="left" width=490 bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
 								style="width: 150" name="guest_homepage"
-								value="<%=guest.getGuest_homepage()%>"></td>
+								value="${guest.guest_homepage}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">이메일</td>
 							<td align="left" width=490 bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
 								style="width: 240" name="guest_email"
-								value="<%=guest.getGuest_email()%>"></td>
+								value="${guest.guest_email}"></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">제목</td>
 							<td align="left" width=490 bgcolor="ffffff"
 								style="padding-left: 10px"><input type="text"
 								style="width: 240" name="guest_title"
-								value="<%=guest.getGuest_title()%> "></td>
+								value="${guest.guest_title} "></td>
 						</tr>
 						<tr>
 							<td width=100 align=center bgcolor="E6ECDE" height="22">내용</td>
 							<td align="left" width=490 bgcolor="ffffff"
 								style="padding-left: 10px"><textarea wrap="soft"
-									style="width: 240px" rows="10" name="guest_content"><%=guest.getGuest_content()%></textarea>
+									style="width: 240px" rows="10" name="guest_content">${guest.guest_content}</textarea>
 
 							</td>
 						</tr>
