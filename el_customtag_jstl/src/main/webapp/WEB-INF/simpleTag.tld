@@ -28,6 +28,17 @@
 	        <rtexprvalue>true</rtexprvalue>	        
 	    </attribute>
 	</tag>
+	<tag>
+	    <name>if</name>
+	    <tagclass>com.itwill.tag.IfTag</tagclass>
+	    <bodycontent>JSP</bodycontent>
+	    <attribute>
+	        <name>test</name>
+	        <required>true</required>
+	        <type>boolean</type>
+	        <rtexprvalue>true</rtexprvalue>  
+	    </attribute>
+	</tag>
 	
 	
 </taglib>
