@@ -15,23 +15,6 @@ Guest guest=(Guest)request.getAttribute("guest");
 <link rel="stylesheet" href="css/guest.css">
 
 <script src="js/guest.js"></script>
-<script type="text/javascript">
-function guestList() {
-	window.location.href = 'guest_list.do';
-}
-function guestModifyForm() {
-	document.f.action = "guest_modify_form.do";
-	document.f.method = 'POST';
-	document.f.submit();
-}
-function guestRemove() {
-	if (window.confirm("정말 지우시겠습니까?")) {
-		document.f.method = 'POST';
-		document.f.action = "guest_remove_action.do";
-		document.f.submit();
-	}
-}
-</script>
 </head>
 <body bgcolor=#FFFFFF text=#000000 leftmargin=0 topmargin=0
 	marginwidth=0 marginheight=0>
