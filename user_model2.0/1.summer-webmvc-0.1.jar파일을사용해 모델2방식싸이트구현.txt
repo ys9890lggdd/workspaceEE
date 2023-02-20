@@ -1,7 +1,7 @@
 A.라이브러리다운로드후[summer-webmvc-0.1.jar] context/WEB-INF/lib 폴더에위치시킨다.(summer-webmvc-0.0.1.jar)
 B./WEB-INF/user_controller_mapping.properties 파일생성
 
-C.모든클라이언트요청(*.do)을 DispatcherServlet이 실행하도록  web.xml설정
+C.모든클라이언트요청(/) 을 DispatcherServlet이 실행하도록  web.xml설정
 
 D.인코딩필터클래스설정  web.xml설정	  
 
@@ -31,7 +31,7 @@ E.contoller설정파일위치파라메타등록
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
 
