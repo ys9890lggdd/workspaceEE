@@ -3,8 +3,8 @@
 <%@page import="com.itwill.user.UserService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%	
-	/*
+<%
+/*
 		0  . GET방식요청일때 user_main.jsp로 redirection
 		1  . 요청객체 인코딩설정
 	    2  . 파라메타 받기
@@ -30,16 +30,16 @@
 		/*##########아이디중복##############*/
 		/****************
 		String msg=
-			URLEncoder.encode(userId+" 는 이미존재하는 아이디입니다","UTF-8");
+	URLEncoder.encode(userId+" 는 이미존재하는 아이디입니다","UTF-8");
 		password=URLEncoder.encode(password, "UTF-8");
 		name=URLEncoder.encode(name, "UTF-8");
 		email=URLEncoder.encode(email, "UTF-8");
 		
 		String queryString="msg="+msg+
-				           "&userId="+userId+
-				           "&password="+password+
-				           "&name="+name+
-				           "&email="+email;
+		           "&userId="+userId+
+		           "&password="+password+
+		           "&name="+name+
+		           "&email="+email;
 		****************************************/
 		
 		/**************case1 script***************
@@ -56,7 +56,7 @@
 		request.setAttribute("msg",msg);
 		request.setAttribute("fuser", newUser);
 		RequestDispatcher rd=
-				request.getRequestDispatcher("user_write_form.jsp");
+		request.getRequestDispatcher("user_write_form.jsp");
 		rd.forward(request, response);
 	}else if(result==1){
 		/*##########회원가입성공##############*/

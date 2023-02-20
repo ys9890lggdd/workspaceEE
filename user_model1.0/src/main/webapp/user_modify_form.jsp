@@ -4,15 +4,14 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="user_login_check.jspf" %>  	
 <%
-	
-	/*
-	1. UserService객체생성
-	2. 세션의 sUserId를 사용해서 UserService.findUser()메쏘드호출
-	3. 반환된 User객체를 form  element  value 값으로 출력
-	*/
-	UserService userService=new UserService();
-	User loginUser=userService.findUser(sUserId);
-%>
+  	/*
+  		1. UserService객체생성
+  		2. 세션의 sUserId를 사용해서 UserService.findUser()메쏘드호출
+  		3. 반환된 User객체를 form  element  value 값으로 출력
+  		*/
+  		UserService userService=new UserService();
+  		User loginUser=userService.findUser(sUserId);
+  	%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

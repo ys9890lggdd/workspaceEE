@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" session="true"%>
 <%
-	/*
+/*
 	0  . GET방식요청일때 user_login_form.jsp로 redirection
 	1  . 요청객체 인코딩설정
 	2  . 파라메타 받기
@@ -34,7 +34,7 @@
 		 out.println("alert('"+msg1+"');");
 		 out.println("location.href='user_login_form.jsp';");
 		 out.println("</script>");
-			
+	
 	 }else if(result==1){
 		 //1:패쓰워드 불일치
 		 String msg2="패쓰워드가 일치하지않습니다.";
@@ -42,14 +42,11 @@
 		 out.println("alert('"+msg2+"');");
 		 out.println("location.href='user_login_form.jsp';");
 		 out.println("</script>");
-			
+	
 		 
 	 }else if(result==2){
 		 //2:로그인성공(세션)
 		 session.setAttribute("sUserId", userId);
 		 response.sendRedirect("user_main.jsp");
 	 }
-	
-	
-	
 %>
