@@ -2,28 +2,23 @@ package com.itwill.user.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.itwill.summer.mvc.Controller;
 import com.itwill.user.User;
 import com.itwill.user.UserService;
+import com.itwill.user.UserServiceImpl;
 
 public class UserModifyActionController implements Controller {
 	private UserService userService;
-	
 	public UserModifyActionController() throws Exception{
-		userService = new UserService();
-		
+		userService=new UserServiceImpl();
 	}
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		String forwardPath = "";
-		HttpSession session = request.getSession();
+		String sUserId=(String)request.getSession().getAttribute("sUserId");
 		/**************** login_check *******************/
-		String sUserId=(String)session.getAttribute("sUserId");
-		if(sUserId==null){
-			forwardPath="redirect:login_form.do";
-		}
+		
 		/*********************************************/
 		/*
 		0.login 여부체크
@@ -34,26 +29,31 @@ public class UserModifyActionController implements Controller {
 		5.성공: redirect:user_view.do forwardPath반환
 		  실패: forward:/WEB-INF/views/user_error.jsp  forwardPath반환
 		*/
-		if(request.getMethod().equalsIgnoreCase("GET")) {
-			forwardPath="redirect:user_main.do";
-		}else {
-			try {
-				request.setCharacterEncoding("UTF-8");
-				String password = request.getParameter("password");
-				String name = request.getParameter("name");
-				String email = request.getParameter("email");
-				User user = new User(sUserId, password, name, email);
-				userService.update(user);
-				forwardPath="redirect:user_view.do";
-			}catch (Exception e) {
-				e.printStackTrace();
-				forwardPath = "forward:/WEB-INF/views/user_error.jsp";
+		try {
+			if(request.getMethod().equalsIgnoreCase("GET")) {
+				forwardPath="redirect:user_main.do";
+				return forwardPath;
 			}
-			
-			
+			String password=request.getParameter("password");
+			String name=request.getParameter("name");
+			String email=request.getParameter("email");
+			int updateRowCount = userService.update(new User(sUserId, password, name, email));
+			forwardPath="redirect:user_view.do";
+		}catch (Exception e) {
+			e.printStackTrace();
+			forwardPath="forward:/WEB-INF/views/user_error.jsp";
 			
 		}
 		return forwardPath;
 	}
 
 }
+
+
+
+
+
+
+
+
+

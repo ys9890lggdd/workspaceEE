@@ -7,14 +7,13 @@ import javax.servlet.http.HttpSession;
 import com.itwill.summer.mvc.Controller;
 import com.itwill.user.User;
 import com.itwill.user.UserService;
+import com.itwill.user.UserServiceImpl;
 
 public class UserLoginActionController implements Controller {
 	private UserService userService;
-
-	public UserLoginActionController() throws Exception {
-		userService = new UserService();
+	public UserLoginActionController() throws Exception{
+		userService=new UserServiceImpl();
 	}
-
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
 		/*
@@ -31,41 +30,39 @@ public class UserLoginActionController implements Controller {
 		try {
 			if(request.getMethod().equalsIgnoreCase("GET")) {
 				forwardPath="redirect:user_login_form.do";
-			}else {
-				String userId = request.getParameter("userId");
-				String password = request.getParameter("password");
-				User fuser = new User(userId, password, "", "");
-				int loginResult = userService.login(userId, password);
-				if(loginResult == 0) {
-					/*
-					 * 아이디 존재하지 않으면~
-					 */
-					String msg1 = userId + "는 존재하지 않는 아이디입니다.";
-					request.setAttribute("msg1", msg1);
-					request.setAttribute("fuser", fuser);
-					forwardPath = "forward:WEB-INF/views/user_login_form.jsp";
-                                        
-				}else if(loginResult == 1) {
-					/*
-					 * 비밀번호 일치하지 않으면~
-					 */
-					String msg2 = password + "비밀번호가 일치하지 않습니다.";
-					request.setAttribute("msg2", msg2);
-					request.setAttribute("fuser", fuser);
-					forwardPath = "forward:WEB-INF/views/user_login_form.jsp"; 
-				}else if(loginResult == 2) {
-					/*
-					 * 로그인 성공이면~			
-					 */
-					request.setAttribute("sUserId", userId);
-					forwardPath="redirect:user_main.do";
-				}
+				return forwardPath;
 			}
-	
-			}catch (Exception e) {
-				e.printStackTrace();
-				forwardPath="forward:/WEB-INF/views/user_error.jsp";
-			}	
+			String userId=request.getParameter("userId");
+			String password=request.getParameter("password");
+			int result=userService.login(userId, password);
+			/*
+			 * 회원로그인
+			 * 0:아이디존재안함
+			 * 1:패쓰워드 불일치
+			 * 2:로그인성공(세션)
+			 */
+			if(result==0) {
+				String msg1 = userId+ " 는 존재하지않는 아이디입니다.";
+				User fuser=new User(userId, password, "", "");
+				request.setAttribute("msg1", msg1);
+				request.setAttribute("fuser", fuser);
+				forwardPath="forward:/WEB-INF/views/user_login_form.jsp";
+			}else if(result==1) {
+				String msg2 = "패쓰워드가 일치하지않습니다";
+				User fuser=new User(userId, password, "", "");
+				request.setAttribute("msg2", msg2);
+				request.setAttribute("fuser", fuser);
+				forwardPath="forward:/WEB-INF/views/user_login_form.jsp";
+			}else if(result==2) {
+				HttpSession  session=request.getSession();
+				session.setAttribute("sUserId", userId);
+				forwardPath="redirect:user_main.do";
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+			forwardPath="forward:/WEB-INF/views/user_error.jsp";
+		}
 		return forwardPath;
 	}
+
 }

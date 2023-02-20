@@ -1,5 +1,5 @@
 <%@page import="com.itwill.user.User"%>
-<%@page import="com.itwill.user.UserService"%>
+<%@page import="com.itwill.user.UserServiceImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
@@ -7,7 +7,7 @@
 1.request기본 객체로부터 속성객체 뽑기
 2.request기본 객체로부터 뽑은속성객체   User객체를 form  element  value 값으로 출력
 */
-User user = (User)request.getAttribute("user");
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -98,33 +98,33 @@ User user = (User)request.getAttribute("user");
 										<td width=100 align=center bgcolor="E6ECDE" height="22">사용자
 											아이디</td>
 										<td width=490 bgcolor="ffffff" style="padding-left: 10px"
-											align="left">${user.userId}</td>
+											align="left">${loginUser.userId}</td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">비밀번호</td>
 										<td width=490 bgcolor="ffffff" style="padding-left: 10px"
 											align="left"><input type="password" style="width: 150px"
-											name="password" value="${user.password}"></td>
+											name="password" value="${loginUser.password }"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">비밀번호
 											확인</td>
 										<td width=490 bgcolor="ffffff" style="padding-left: 10px"
 											align="left"><input type="password" style="width: 150px"
-											name="password2" value="${user.password}"></td>
+											name="password2" value="${loginUser.password}"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">이름</td>
 										<td width=490 bgcolor="ffffff" style="padding-left: 10px"
 											align="left"><input type="text" style="width: 150px"
-											name="name" value="${user.name}"></td>
+											name="name" value="${loginUser.name}"></td>
 									</tr>
 									<tr>
 										<td width=100 align=center bgcolor="E6ECDE" height="22">이메일
 											주소</td>
 										<td width=490 bgcolor="ffffff" style="padding-left: 10px"
 											align="left"><input type="text" style="width: 150px"
-											name="email" value="${user.email}"></td>
+											name="email" value="${loginUser.email }"></td>
 									</tr>
 								</table>
 							</form> <br>
